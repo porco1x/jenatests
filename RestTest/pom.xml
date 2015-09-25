@@ -1,0 +1,99 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>RestTest</groupId>
+  <artifactId>RestTest</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  
+  <dependencies>
+  
+  <!-- -  Jersey Dependencies  -->
+  
+   <dependency>
+<groupId>org.glassfish.jersey.containers</groupId>
+<artifactId>jersey-container-servlet</artifactId>
+<version>2.7</version>
+ </dependency>
+ <dependency>
+<groupId>org.glassfish.jersey.media</groupId>
+<artifactId>jersey-media-json-jackson</artifactId>
+<version>2.7</version>
+ </dependency>
+ <dependency>
+<groupId>org.glassfish.jersey.media</groupId>
+<artifactId>jersey-media-moxy</artifactId>
+<version>2.7</version>
+ </dependency>
+<!-- Required only when you are using JAX-RS Client -->
+<dependency>
+    <groupId>org.glassfish.jersey.core</groupId>
+    <artifactId>jersey-client</artifactId>
+    <version>2.17</version>
+</dependency>
+
+  <!-- -  Sesame dependencies  -->
+
+ 	<dependency>
+  		<groupId>org.openrdf.sesame</groupId>
+  		<artifactId>sesame-runtime</artifactId>
+  		<version>2.7.9</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>ch.qos.logback</groupId>
+  		<artifactId>logback-classic</artifactId>
+  		<version>1.0.13</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.openrdf.sesame</groupId>
+  		<artifactId>sesame-repository-sail</artifactId>
+  		<version>2.7.9</version>
+  	</dependency>
+  	
+  	
+  		<dependency>
+ 	<groupId>org.openrdf.sesame</groupId>
+  	<artifactId>sesame-rio-rdfxml</artifactId>
+  	<version>2.7.9</version>
+	</dependency>
+		<dependency>
+  	<groupId>org.openrdf.sesame</groupId>
+  <artifactId>sesame-rio-turtle</artifactId>
+  <version>2.7.9</version>
+</dependency>
+  	<dependency> 
+  <groupId>org.openrdf.sesame</groupId> 
+  <artifactId>sesame-repository-sparql</artifactId> 
+  <version>2.7.9</version> 
+</dependency>
+
+<dependency>
+	<groupId>org.json</groupId>
+	<artifactId>json</artifactId>
+	<version>20090211</version>
+</dependency>
+
+
+
+</dependencies>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.4</version>
+        <configuration>
+          <warSourceDirectory>WebContent</warSourceDirectory>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
